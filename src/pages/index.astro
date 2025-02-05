@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Showcase from "../components/Showcase.astro";
+import Features from "../components/Features.astro";
+import {Image} from 'astro:assets';
+import photo4 from '../images/photo4.jpg';
+import photo5 from '../images/photo5.jpg';
+
+---
+
+
+<Layout>
+	<Showcase showExtra= {true}/>
+<Features/>
+<section class="page-content">
+	<div class="container">
+	  <h3>Вершина "Рыжий бугор 3762м"</h3>
+	  <p>
+		Рыжий Бугор, высотой 3762 метра, дарит захватывающий вид на Эльбрус и пик Калицкого.
+	  </p>
+	  
+	  <Image src = {photo4} alt="test" width={550} height={450}/>
+
+	  <h3>Ущелье Ирик-Чат</h3>
+	  <Image src = {photo5} alt="test" width={550} height={450}/>
+
+	  <p>
+		Ущелье Ирик-Чат – одно из самых живописных и запоминающихся мест Приэльбрусья, 
+		сочетающее в себе суровую красоту высокогорья, буйство зелени и кристальную чистоту ледниковых вод.
+
+	  </p>
+	</div>
+  </section>
+</Layout>

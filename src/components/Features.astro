@@ -1,0 +1,56 @@
+---
+//import {Image} from 'astro:assets';
+//import logo from '../images/logo.jpg';
+import Card from './Card.astro';
+const featuresData = [
+    {title: 'Бэкпекинг (backpacking)',
+     body: 'Это вид путешествий, который характеризуется независимостью, бюджетностью и акцентом на приключения и погружение в местную культуру. Бэкпекинг- это не просто способ путешествовать, это философия, которая учит жить проще, ценить моменты и открывать мир во всей красе.',
+            
+     
+    },
+    {title:'Фастпакинг (fastpacking)',
+    body: ' Фокусируется на покрытии больших расстояний за короткий промежуток времени, используя минимальный набор снаряжения. В отличие от обычного бэкпакинга, fastpacking предполагает более быстрый темп и требует высокой выносливости.Главный акцент делается на скорости и эффективности, а не на комфорте.',
+    
+    },
+    {
+        title:'Ultralight backpacking',
+        body:' Is a style of backpacking that emphasizes minimizing the weight carried, enabling faster travel and increased comfort.Its not just about being light its a philosophy of carefully considering every item and choosing the lightest possible option that still meets your needs for safety and comfort.',
+        
+
+    },
+]
+
+---
+
+<section class="features">
+    <div class="container"> 
+      
+       {featuresData.map(feature =>(<Card dark={false} >
+       <h1>{feature.title}</h1> <p>{feature.body}</p></Card> ))}
+      
+    </div>
+    
+   
+  </section>
+<style>
+    /* Cards */
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 0 20px;
+  margin: 30px auto;
+}
+img {
+            /* Стили для изображения */
+            max-width: 250px;
+            height: auto;
+        }
+@media (max-width: 500px) {
+  .features .container {
+    grid-template-columns: 1fr;
+  }}
+
+ 
+
+</style>
