@@ -4,6 +4,6 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
     site: 'https://brambrambel.github.io',
-  base: '/oneproject/',
+  
 });
 
